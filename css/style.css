@@ -1,0 +1,500 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Andika', sans-serif;
+    /* border:1px solid black */
+}
+
+header a {
+    text-decoration: none;
+    color: white;
+    text-shadow: 0 0 5px black;
+}
+footer a{
+    text-decoration: none;
+    color:black;
+}
+    /*  organizacion de la Pagina  */
+body.index{
+    display: grid;
+    grid-template-rows: 150px 1fr 414px;
+    grid-template-areas: 
+    "header"
+    "main"
+    "footer";
+}
+body.index header{
+    grid-area: header;
+}
+body.index main{
+    grid-area: main;
+}
+body.index footer{
+    grid-area: footer;
+}
+    /*  Encabezado  */
+header{
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    padding: 5px;
+    justify-content:space-around;
+    align-content: center;
+}
+
+h1{
+    display:inline-block;
+    position: relative;
+    right: 30px;
+    align-self: center;
+    justify-self: center;
+    font-size: 1.5rem;
+}
+.index nav{
+    display:inline-block;
+    position: relative;
+    left:30px;
+    bottom: 10px;
+}
+.navegador ul{
+    position: relative;
+    top: 5vh;
+    justify-items: center;
+    align-items: center;
+    font-size: 1rem;
+}
+
+    /*  Contenido de la pagina  */
+main.index{
+    padding: 15px;
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(2,49%); 
+    grid-template-rows: 60% 40%;
+    gap: 2vw 2vw;
+    grid-template-areas: 
+    "banner evento"
+    "trailer trailer"; 
+}
+
+.banner{
+    grid-area: banner;
+}
+.banner img{
+    width: 100%;
+    height: 100%;
+}
+.eventos{
+    grid-area: evento;
+}
+.eventos img{
+    width: 100%;
+    height: 100%;
+}
+
+.trailer{
+    grid-area: trailer;
+}
+.trailer iframe{
+    width: 100%;
+    height: 90%;
+}
+
+    /*  Footer  */
+    footer{
+        display: flex;
+        flex-direction:row;
+        justify-content: space-around;
+    }
+
+    /*Fondo de la pagina*/
+header{
+    background-color: #254692;
+    color: white;
+    text-shadow: 0 0 15px black;
+}
+.fondo{
+    background-image: url(../img/fondo-pagina);
+    background-size: cover;
+}
+footer{
+    background-color: rgba(71, 61, 139, 0.651);
+}
+
+        
+
+
+    /*------------------Pagina de Artefactos--------------*/
+
+    /*  Contenido   */
+body.artefactos{
+    display: grid;
+    grid-template-rows: 1fr 5fr 1fr;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+    "header"
+    "main"
+    "footer";
+}
+body.artefactos header{
+    grid-area: header;
+}
+body.artefactos main{
+    grid-area:main;
+}
+body.artefactos footer{
+    grid-area: footer;
+}
+.main-artefactos{
+    display: grid; 
+    grid-template-columns: 1fr; 
+    grid-template-rows: repeat(3,1fr);
+    gap: 5px ;
+    grid-template-areas: 
+    "mondstand"
+    "liyue"
+    "inazuma"
+}
+/*-----------Secciones--------------------*/
+
+        /*  MONDSTAND   */
+
+.mondstand{
+    grid-area: mondstand;
+    padding: 5px;
+    display: grid; 
+    grid-template-columns: repeat(4,1fr); 
+    grid-template-rows: 1fr 2fr 2fr; 
+    gap: 5px;
+    grid-template-areas: 
+    "titulo titulo titulo titulo"
+    "gladiador orquesta sombra doncella"
+    "corazon nomada furia domador"; 
+    justify-items: center;
+    align-items: center;
+}
+.mondstand h2{
+    grid-area: titulo;
+    text-shadow: 0 0 5px white;
+}
+.gladiador img{
+    grid-area: gladiador;
+}
+.orquesta img{
+    grid-area: orquesta;
+}
+.sombra{
+    grid-area: sombra;
+}
+.doncella{
+    grid-area: doncella;
+}
+.corazon{
+    grid-area:corazon;
+} 
+.nomada{
+    grid-area: nomada;
+}
+.furia{
+    grid-area: furia;
+}
+.domador{
+    grid-area: domador;
+}
+
+
+.liyue{
+    grid-area: liyue;
+    padding: 5px;
+    display: grid; 
+    grid-template-columns: repeat(4,1fr); 
+    grid-template-rows: 1fr 2fr 2fr; 
+    gap: 5px;
+    grid-template-areas: 
+    "titulo titulo titulo titulo"
+    "bruja tenacidad petra nobleza"
+    "corredor llamas arcaica caballeria"; 
+    justify-items: center;
+    align-items: center;
+}
+.liyue h2{
+    grid-area: titulo;
+    text-shadow: 0 0 5px white;
+}
+.bruja{
+    grid-area: bruja;
+}
+.corredor{
+    grid-area: corredor;
+}
+.tenacidad{
+    grid-area: tenacidad;
+}
+.llamas{
+    grid-area: llamas;
+}
+.petra{
+    grid-area: petra;
+}
+.arcaica{
+    grid-area: arcaica;
+}
+.nobleza{
+    grid-area: nobleza;
+}
+.caballeria{
+    grid-area: caballeria;
+}
+
+.inazuma{
+    grid-area: inazuma;
+    padding: 5px;
+    display: grid; 
+    grid-template-columns: repeat(3,1fr); 
+    grid-template-rows: 1fr 2fr 2fr; 
+    gap: 5px;
+    grid-template-areas: 
+    "titulo titulo titulo "
+    "emblema perla eco "
+    "reminiscencia cascara deceso "; 
+    justify-items: center;
+    align-items: center;
+}
+.inazuma h2{
+    grid-area: titulo;
+    text-shadow: 0 0 5px white;
+}
+.emblema{
+    grid-area: emblema;
+}
+.reminiscensia{
+    grid-area: reminiscencia;
+}
+.perla{
+    grid-area: perla;
+}
+.cascara{
+    grid-area: cascara;
+}
+.eco{
+    grid-area: eco;
+}
+.deceso{
+    grid-area: deceso;
+}
+main.main-artefactos{
+    background-image: url(../img/fondo-pagina);
+    background-size: cover;
+}
+.main-artefactos section{
+    background-color: rgba(0, 0, 0, 0.384);
+    background-size: 100%;
+}
+
+        /*-----------PAGINA NOTICIAS--------------*/
+
+body.noticias{
+    display: grid;
+    grid-template-rows: 1fr 5fr 1fr;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+    "header"
+    "main"
+    "footer";
+    }
+body.noticias header{
+    grid-area: header;
+}
+body.noticias main{
+    grid-area:main;
+}
+body.noticias footer{
+    grid-area: footer;
+}
+
+    /*      orden del contenido     */
+
+.primer_hilera{
+    width: 96vw;
+    padding: 5px;
+    display: flex;
+    flex-direction: row;
+}
+.noticia_der{
+    width: 50vw;
+    padding: 5px;
+    margin:2px;
+    border: 1px solid white;
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0.534);
+}
+.noticia_der img{
+    position: relative;
+    left: 12vw;
+}
+.noticia_der p{
+    color: white;
+    font-size: 0.8rem;
+    text-align: center;
+}
+.noticia_izq{
+    width: 50vw;
+    padding: 5px;
+    margin:1px;
+    border: 1px solid white;
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0.534);
+}
+.noticia_izq img{
+    position: relative;
+    left: 12vw;
+}
+.noticia_izq p{
+    color: white;
+    font-size: 0.8rem;
+    text-align: center;
+}
+
+.primer_noticias_relevante{
+    border: 1px solid white;
+    background-color: rgba(0, 0, 0, 0.534);
+    border-radius: 5px;
+    display:flex;
+    flex-direction: row;
+    height: 20vh;
+    width:93vw;
+    margin: 5px;
+    padding: 10px;
+}
+
+.primer_noticias_relevante p{
+    position: relative;
+    top: 5vh;
+    padding: 10px;
+    color: white;
+}
+.segunda_hilera{
+    width: 96vw;
+    padding: 5px;
+    display: flex;
+    flex-direction: row;
+}
+.segunda_noticias_relevante{
+    background-color: rgba(0, 0, 0, 0.534);
+    width: 93vw;
+    display: flex;
+    flex-direction: row;
+    border:1px solid white;
+    border-radius: 5px;
+    margin: 5px;
+    padding:5px;
+}
+.segunda_noticias_relevante p{
+    color: white;
+    text-align: center;
+}
+.segunda_noticias_relevante img{
+    position: relative;
+}
+main.main-noticias{
+    background-image: url(../img/fondo-pagina);
+    background-size: cover;
+}
+
+        /*-----------Media Queries----------------*/
+@media (min-width: 480px){
+    h1{
+        font-size: 2rem;
+    }
+    header h1{
+        text-align: center;
+    }
+    header {
+        display: flex;
+        flex-direction: column;
+    }
+    .navegador ul{
+        padding-left: 50px;
+        display: flex;
+        flex-direction: row;
+    }
+    li{
+        text-align: center;
+        position: relative;
+        bottom: 35px;
+        padding-inline: 19%;
+    }
+
+    /*estrucura del index*/
+
+    main.index{
+        padding: 15px;
+        display: grid;
+        gap: 0px 5px;
+        width: 100%;
+        grid-template-columns: repeat(8,1fr);
+        grid-template-rows: repeat(5,1fr);
+        grid-template-areas:
+        "banner banner . . . . evento evento"
+        "banner banner . . . . evento evento"     
+        "banner banner trailer trailer trailer trailer evento evento"
+        "banner banner trailer trailer trailer trailer evento evento"
+        "banner banner trailer trailer trailer trailer evento evento";
+        
+    }
+    .banner{
+        grid-area: banner;
+    }
+    .banner img{
+        width: 100%;
+        height: 100%;
+    }
+    .eventos{
+        grid-area: evento;
+    }
+    .eventos img{
+        width: 100%;
+        height: 100%;
+    }
+    
+    .trailer{
+        grid-area: trailer;
+    }
+    .trailer iframe{
+        width: 100%;
+        height: 100%;
+    }
+
+    .informacion li{
+        display: inline-block;
+    }
+    .informacion ul{
+        position: relative;
+        right: 40px;
+        top: 25px;
+    }
+    .informacion h3{
+        position: relative;
+        left: 40px;
+    }
+    .redes li{
+        display: inline-block;
+    }
+    .redes ul{
+        position: relative;
+        top: 30px;
+    }
+    .redes h3{
+        position: relative;
+        left: 40px;
+    }
+}
+
+
+
+
+
+
+
+
