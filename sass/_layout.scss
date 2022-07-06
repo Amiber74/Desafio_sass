@@ -1,0 +1,145 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Andika', sans-serif ;
+}
+
+body{
+    display: grid;
+    grid-template-rows: 150px 1fr 414px;
+    grid-template-areas: 
+    "header"
+    "main"
+    "footer";
+    header{
+        grid-area: header;
+    }
+    main{
+        grid-area: main;
+    }
+    footer{
+        grid-area: footer;
+    }
+}
+header{
+    background-color: #254692;
+    color: white;
+    text-shadow: 0 0 15px black;
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    padding: 5px;
+    justify-content:space-around;
+    align-content: center;
+    h1{
+        display:inline-block;
+        position: relative;
+        right: 30px;
+        align-self: center;
+        justify-self: center;
+        font-size: 1.5rem;
+    }
+    a{
+        text-decoration: none;
+        color: white;
+        text-shadow: 0 0 5px black;
+    }
+    .navegador{
+        display:inline-block;
+        position: relative;
+        left:30px;
+        bottom: 10px;
+        ul{
+            position: relative;
+            top: 5vh;
+            justify-items: center;
+            align-items: center;
+            font-size: 1rem;
+
+        }
+    }
+}
+main{
+    background-image: url(../img/fondo-pagina);
+    background-size: cover;
+}
+
+footer{
+    display: flex;
+    flex-direction:row;
+    justify-content: space-around;
+    background-color:rgba(71, 61, 139, 0.651) ;
+    a{
+        text-decoration: none;
+        color: black;
+    }
+}
+@media (min-width: 480px){
+    header{
+        display: flex;
+        flex-direction: column;
+        h1{
+            font-size: 2rem;
+            text-align: center;
+        }
+        .navegador{
+            ul{
+                padding-left: 50px;
+                display: flex;
+                flex-direction: row;
+                li{
+                    text-align: center;
+                    position: relative;
+                    bottom: 35px;
+                    padding-inline: 19%;
+                }
+            }
+        }
+    }
+    footer{
+        .informacion{ 
+            h3{
+                position: relative;
+                left: 40px;
+            }
+            ul{
+                position: relative;
+                right: 40px;
+                top: 25px;
+                li{
+                    display: inline-block;
+                }
+            }
+        }
+        .informacion h3{
+            position: relative;
+            left: 40px;
+        }
+        .redes{
+            h3{
+                position: relative;
+                left: 40px;
+            }
+            ul{
+                position: relative;
+                top:30px;
+                li{
+                    display: inline-block;
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
