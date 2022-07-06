@@ -74,54 +74,6 @@ footer a {
   color: black;
 }
 
-@media (min-width: 480px) {
-  header {
-    display: flex;
-    flex-direction: column;
-  }
-  header h1 {
-    font-size: 2rem;
-    text-align: center;
-  }
-  header .navegador ul {
-    padding-left: 50px;
-    display: flex;
-    flex-direction: row;
-  }
-  header .navegador ul li {
-    text-align: center;
-    position: relative;
-    bottom: 35px;
-    padding-inline: 19%;
-  }
-  footer .informacion h3 {
-    position: relative;
-    left: 40px;
-  }
-  footer .informacion ul {
-    position: relative;
-    right: 40px;
-    top: 25px;
-  }
-  footer .informacion ul li {
-    display: inline-block;
-  }
-  footer .informacion h3 {
-    position: relative;
-    left: 40px;
-  }
-  footer .redes h3 {
-    position: relative;
-    left: 40px;
-  }
-  footer .redes ul {
-    position: relative;
-    top: 30px;
-  }
-  footer .redes ul li {
-    display: inline-block;
-  }
-}
 main.index {
   padding: 15px;
   display: grid;
@@ -153,44 +105,6 @@ main .trailer iframe {
   height: 90%;
 }
 
-@media (min-width: 480px) {
-  mainindex {
-    padding: 15px;
-    display: grid;
-    gap: 0px 5px;
-    width: 100%;
-    grid-template-columns: repeat(8, 1fr);
-    grid-template-rows: repeat(5, 1fr);
-    grid-template-areas: "banner banner . . . . evento evento" "banner banner . . . . evento evento" "banner banner trailer trailer trailer trailer evento evento" "banner banner trailer trailer trailer trailer evento evento" "banner banner trailer trailer trailer trailer evento evento";
-  }
-  mainindex .banner {
-    grid-area: banner;
-  }
-  mainindex .banner img {
-    width: 100%;
-    height: 100%;
-  }
-  mainindex .eventos {
-    grid-area: evento;
-  }
-  mainindex .eventos img {
-    width: 100%;
-    height: 100%;
-  }
-  mainindex .trailer {
-    grid-area: trailer;
-  }
-  mainindex .trailer iframe {
-    width: 100%;
-    height: 90%;
-  }
-}
-/*Fondo de los artefactos*/
-section {
-  background-color: rgba(0, 0, 0, 0.384);
-  background-size: 100%;
-}
-
 /* Estrucura de la pagina */
 .main-artefactos {
   display: grid;
@@ -201,6 +115,10 @@ section {
   /*seccion*/
   /*seccion*/
   /*seccion*/
+}
+.main-artefactos section {
+  background-color: rgba(0, 0, 0, 0.384);
+  background-size: 100%;
 }
 .main-artefactos .mondstand {
   grid-area: mondstand;
@@ -312,6 +230,82 @@ section {
 }
 .main-artefactos .inazuma .deceso {
   grid-area: deceso;
+}
+
+/*  Media queries del Layout    */
+@media (min-width: 480px) {
+  body header {
+    display: flex;
+    flex-direction: column;
+  }
+  body header h1 {
+    font-size: 2rem;
+    text-align: center;
+  }
+  body header .navegador ul {
+    padding-left: 50px;
+    display: flex;
+    flex-direction: row;
+  }
+  body header .navegador ul li {
+    text-align: center;
+    position: relative;
+    bottom: 35px;
+    padding-inline: 19%;
+  }
+  body footer .informacion h3 {
+    position: relative;
+    left: 40px;
+  }
+  body footer .informacion ul {
+    position: relative;
+    right: 40px;
+    top: 25px;
+  }
+  body footer .informacion h3 {
+    position: relative;
+    left: 40px;
+  }
+  body footer .redes h3 {
+    position: relative;
+    left: 40px;
+  }
+  body footer .redes ul {
+    position: relative;
+    top: 30px;
+  }
+}
+@media (min-width: 480px) {
+  body main.index {
+    padding: 15px;
+    display: grid;
+    gap: 0px 5px;
+    width: 100%;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    grid-template-areas: "banner banner . . . . evento evento" "banner banner . . . . evento evento" "banner banner trailer trailer trailer trailer evento evento" "banner banner trailer trailer trailer trailer evento evento" "banner banner trailer trailer trailer trailer evento evento";
+  }
+  body main.index .banner {
+    grid-area: banner;
+  }
+  body main.index .banner img {
+    width: 100%;
+    height: 100%;
+  }
+  body main.index .eventos {
+    grid-area: evento;
+  }
+  body main.index .eventos img {
+    width: 100%;
+    height: 100%;
+  }
+  body main.index .trailer {
+    grid-area: trailer;
+  }
+  body main.index .trailer iframe {
+    width: 100%;
+    height: 90%;
+  }
 }
 
 @media (min-width: 600px) {
