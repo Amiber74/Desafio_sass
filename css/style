@@ -118,9 +118,6 @@ footer a {
     position: relative;
     top: 30px;
   }
-  footer .redes ul li {
-    display: inline-block;
-  }
 }
 main.index {
   padding: 15px;
@@ -347,4 +344,4 @@ section {
   }
 }
 
-/*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=style.map */
