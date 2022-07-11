@@ -82,8 +82,8 @@
         gap: 5px;
         grid-template-areas: 
         "titulo titulo titulo titulo"
-        "bruja tenacidad petra nobleza"
-        "corredor llamas arcaica caballeria"; 
+        "bruja tenacidad arcaica nobleza"
+        "corredor llamas meteorito caballeria"; 
         justify-items: center;
         align-items: center;
         h2{
@@ -105,8 +105,8 @@
         .petra{
             grid-area: petra;
         }
-        .arcaica{
-            grid-area: arcaica;
+        .meteorito{
+            grid-area: meteorito;
         }
         .nobleza{
             grid-area: nobleza;
