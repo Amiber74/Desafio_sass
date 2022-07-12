@@ -7,11 +7,12 @@
 
 body {
   display: grid;
-  grid-template-rows: 150px 1fr 414px;
-  grid-template-areas: "header" "main" "footer";
+  grid-template-rows: 1fr 5fr 1fr;
+  grid-template-columns: 1fr;
+  grid-template-areas: "head" "main" "footer";
 }
 body header {
-  grid-area: header;
+  grid-area: head;
 }
 body main {
   grid-area: main;
@@ -78,7 +79,7 @@ main.index {
   padding: 15px;
   display: grid;
   width: 100%;
-  grid-template-columns: repeat(2, 49%);
+  grid-template-columns: repeat(2, 50vw);
   grid-template-rows: 60% 40%;
   gap: 2vw 2vw;
   grid-template-areas: "banner evento" "trailer trailer";
@@ -106,6 +107,17 @@ main .trailer iframe {
 }
 
 /* Estrucura de la pagina */
+.grids, .main-artefactos .inazuma, .main-artefactos .liyue, .main-artefactos .mondstand {
+  padding: 5px;
+  gap: 5px;
+  justify-items: center;
+  align-items: center;
+}
+.grids h2, .main-artefactos .inazuma h2, .main-artefactos .liyue h2, .main-artefactos .mondstand h2 {
+  grid-area: titulo;
+  text-shadow: 0 0 5px white;
+}
+
 .main-artefactos {
   display: grid;
   grid-template-columns: 1fr;
@@ -122,114 +134,97 @@ main .trailer iframe {
 }
 .main-artefactos .mondstand {
   grid-area: mondstand;
-  padding: 5px;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: 1fr 2fr 2fr;
-  gap: 5px;
-  grid-template-areas: "titulo titulo titulo titulo" "gladiador orquesta sombra doncella" "corazon nomada furia domador";
-  justify-items: center;
-  align-items: center;
-}
-.main-artefactos .mondstand h2 {
-  grid-area: titulo;
-  text-shadow: 0 0 5px white;
-}
-.main-artefactos .mondstand .gladiador img {
-  grid-area: gladiador;
-}
-.main-artefactos .mondstand .orquesta img {
-  grid-area: orquesta;
-}
-.main-artefactos .mondstand .sombra img {
-  grid-area: sombra;
-}
-.main-artefactos .mondstand .doncella img {
-  grid-area: doncella;
-}
-.main-artefactos .mondstand .corazon img {
-  grid-area: corazon;
-}
-.main-artefactos .mondstand .nomada img {
-  grid-area: nomada;
-}
-.main-artefactos .mondstand .furia img {
-  grid-area: furia;
-}
-.main-artefactos .mondstand .domador img {
-  grid-area: domador;
+  grid-template-areas: "titulo titulo titulo titulo" "pos_1 pos_2 pos_3 pos_4" "pos_5 pos_6 pos_7 pos_8";
 }
 .main-artefactos .liyue {
   grid-area: liyue;
-  padding: 5px;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: 1fr 2fr 2fr;
-  gap: 5px;
-  grid-template-areas: "titulo titulo titulo titulo" "bruja tenacidad petra nobleza" "corredor llamas arcaica caballeria";
-  justify-items: center;
-  align-items: center;
-}
-.main-artefactos .liyue h2 {
-  grid-area: titulo;
-  text-shadow: 0 0 5px white;
-}
-.main-artefactos .liyue .bruja {
-  grid-area: bruja;
-}
-.main-artefactos .liyue .corredor {
-  grid-area: corredor;
-}
-.main-artefactos .liyue .tenacidad {
-  grid-area: tenacidad;
-}
-.main-artefactos .liyue .llamas {
-  grid-area: llamas;
-}
-.main-artefactos .liyue .petra {
-  grid-area: petra;
-}
-.main-artefactos .liyue .arcaica {
-  grid-area: arcaica;
-}
-.main-artefactos .liyue .nobleza {
-  grid-area: nobleza;
-}
-.main-artefactos .liyue .caballeria {
-  grid-area: caballeria;
+  grid-template-areas: "titulo titulo titulo titulo" "pos_1 pos_2 pos_3 pos_4" "pos_5 pos_6 pos_7 pos_8";
 }
 .main-artefactos .inazuma {
   grid-area: inazuma;
-  padding: 5px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: 1fr 2fr 2fr;
-  gap: 5px;
-  grid-template-areas: "titulo titulo titulo " "emblema perla eco " "reminiscencia cascara deceso ";
-  justify-items: center;
-  align-items: center;
+  grid-template-areas: "titulo titulo titulo " "pos_1 pos_2 pos_3 " "pos_4 pos_5 pos_6";
 }
-.main-artefactos .inazuma h2 {
-  grid-area: titulo;
-  text-shadow: 0 0 5px white;
+
+.main-artefactos .mondstand .mpos_1 img {
+  grid-area: pos_1;
 }
-.main-artefactos .inazuma .emblema {
-  grid-area: emblema;
+.main-artefactos .mondstand .mpos_2 img {
+  grid-area: pos_2;
 }
-.main-artefactos .inazuma .reminiscensia {
-  grid-area: reminiscencia;
+.main-artefactos .mondstand .mpos_3 img {
+  grid-area: pos_3;
 }
-.main-artefactos .inazuma .perla {
-  grid-area: perla;
+.main-artefactos .mondstand .mpos_4 img {
+  grid-area: pos_4;
 }
-.main-artefactos .inazuma .cascara {
-  grid-area: cascara;
+.main-artefactos .mondstand .mpos_5 img {
+  grid-area: pos_5;
 }
-.main-artefactos .inazuma .eco {
-  grid-area: eco;
+.main-artefactos .mondstand .mpos_6 img {
+  grid-area: pos_6;
 }
-.main-artefactos .inazuma .deceso {
-  grid-area: deceso;
+.main-artefactos .mondstand .mpos_7 img {
+  grid-area: pos_7;
+}
+.main-artefactos .mondstand .mpos_8 img {
+  grid-area: pos_8;
+}
+.main-artefactos .liyue .lpos_1 img {
+  grid-area: pos_1;
+}
+.main-artefactos .liyue .lpos_2 img {
+  grid-area: pos_2;
+}
+.main-artefactos .liyue .lpos_3 img {
+  grid-area: pos_3;
+}
+.main-artefactos .liyue .lpos_4 img {
+  grid-area: pos_4;
+}
+.main-artefactos .liyue .lpos_5 img {
+  grid-area: pos_5;
+}
+.main-artefactos .liyue .lpos_6 img {
+  grid-area: pos_6;
+}
+.main-artefactos .liyue .lpos_7 img {
+  grid-area: pos_7;
+}
+.main-artefactos .liyue .lpos_8 img {
+  grid-area: pos_8;
+}
+.main-artefactos .inazuma .ipos_1 img {
+  grid-area: pos_1;
+}
+.main-artefactos .inazuma .ipos_2 img {
+  grid-area: pos_2;
+}
+.main-artefactos .inazuma .ipos_3 img {
+  grid-area: pos_3;
+}
+.main-artefactos .inazuma .ipos_4 img {
+  grid-area: pos_4;
+}
+.main-artefactos .inazuma .ipos_5 img {
+  grid-area: pos_5;
+}
+.main-artefactos .inazuma .ipos_6 img {
+  grid-area: pos_6;
+}
+.main-artefactos .inazuma .ipos_7 img {
+  grid-area: pos_7;
+}
+.main-artefactos .inazuma .ipos_8 img {
+  grid-area: pos_8;
 }
 
 /*  Media queries del Layout    */
